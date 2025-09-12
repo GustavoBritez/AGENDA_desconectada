@@ -1,4 +1,4 @@
-namespace AGENDA_desconectada
+namespace Agenda
 {
     internal static class Program
     {

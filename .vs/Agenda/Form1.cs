@@ -1,4 +1,4 @@
-namespace AGENDA_desconectada
+namespace Agenda
 {
     public partial class Form1 : Form
     {
