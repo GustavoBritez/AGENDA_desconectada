@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Danie\\source\\repos\\GustavoBritez\\AGENDA_desconectada\\.vs\\Agenda\\Agenda.csproj",
+      "projectUniqueName": "C:\\Users\\Danie\\source\\repos\\GustavoBritez\\AGENDA_desconectada\\Agenda.csproj",
       "projectName": "Agenda",
-      "projectPath": "C:\\Users\\Danie\\source\\repos\\GustavoBritez\\AGENDA_desconectada\\.vs\\Agenda\\Agenda.csproj",
+      "projectPath": "C:\\Users\\Danie\\source\\repos\\GustavoBritez\\AGENDA_desconectada\\Agenda.csproj",
       "packagesPath": "C:\\Users\\Danie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Danie\\source\\repos\\GustavoBritez\\AGENDA_desconectada\\.vs\\Agenda\\obj\\",
+      "outputPath": "C:\\Users\\Danie\\source\\repos\\GustavoBritez\\AGENDA_desconectada\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
