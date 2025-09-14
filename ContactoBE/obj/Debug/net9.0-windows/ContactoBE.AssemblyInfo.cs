@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Agenda")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("ContactoBE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b73135c0ebb77181713b3879bd695cd8040144cf")]
-[assembly: System.Reflection.AssemblyProductAttribute("Agenda")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Agenda")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+622a734e7ec2c8817c13bcfeac250316b888f7d9")]
+[assembly: System.Reflection.AssemblyProductAttribute("ContactoBE")]
+[assembly: System.Reflection.AssemblyTitleAttribute("ContactoBE")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]
