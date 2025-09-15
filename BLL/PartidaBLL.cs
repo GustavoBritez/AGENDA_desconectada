@@ -2,6 +2,7 @@
 using DAL;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,8 +17,21 @@ namespace BLL
         {
             try
             {
+
                 PartidaBE partidaBE = new PartidaBE();
 
+            }
+            catch( Exception ex )
+            {
+                throw new ArgumentException(ex.Message);
+            }
+        }
+
+        public DataTable Obtener_Bloque( )
+        {
+            try
+            {
+                return mapper.ObtenerBloques();
             }
             catch( Exception ex )
             {

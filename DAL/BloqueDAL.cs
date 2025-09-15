@@ -57,29 +57,5 @@ namespace DAL
                 throw new ArgumentException(ex.Message);
             }
         }
-
-        public List<BloqueBE> ObtenerBloques()
-        {
-            try
-            {
-                DataTable bloques = acceso.Leer("OBTENERBLOQUES",null);   
-                List<BloqueBE> lista_bloques = new();
-
-                foreach( DataRow fila in bloques.Rows )
-                {
-                    BloqueBE newBloque = new BloqueBE
-                    {
-                        NroBloque = Convert.ToInt32(fila["NRO_BLOQUE"]),
-
-                    };
-                }
-
-
-            }
-            catch(Exception ex )
-            {
-                throw new ArgumentException(ex.Message);
-            }
-        }
     }
 }

@@ -28,8 +28,6 @@ namespace GUI
 
             Panel_Contenedor.Controls.Add(ventana);
             ventana.Show();
-
-
         }
 
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)

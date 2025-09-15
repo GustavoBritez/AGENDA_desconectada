@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            GoupBox = new GroupBox();
+            GB_BOX = new GroupBox();
             OP_3 = new CheckBox();
             OP_2 = new CheckBox();
             OP_1 = new CheckBox();
@@ -36,29 +36,29 @@
             BTN_VOLVER_ATRAS = new Button();
             BTN_ENVIAR_RESPUESTA = new Button();
             BTN_Agregar_Bloque = new Button();
-            GoupBox.SuspendLayout();
+            GB_BOX.SuspendLayout();
             SuspendLayout();
             // 
-            // GoupBox
+            // GB_BOX
             // 
-            GoupBox.Controls.Add(OP_3);
-            GoupBox.Controls.Add(OP_2);
-            GoupBox.Controls.Add(OP_1);
-            GoupBox.Controls.Add(Rich_Tx);
-            GoupBox.FlatStyle = FlatStyle.System;
-            GoupBox.Location = new Point(69, 58);
-            GoupBox.Name = "GoupBox";
-            GoupBox.Size = new Size(586, 188);
-            GoupBox.TabIndex = 0;
-            GoupBox.TabStop = false;
-            GoupBox.Text = "Trivia";
+            GB_BOX.Controls.Add(OP_3);
+            GB_BOX.Controls.Add(OP_2);
+            GB_BOX.Controls.Add(OP_1);
+            GB_BOX.Controls.Add(Rich_Tx);
+            GB_BOX.FlatStyle = FlatStyle.System;
+            GB_BOX.Location = new Point(69, 58);
+            GB_BOX.Name = "GB_BOX";
+            GB_BOX.Size = new Size(586, 188);
+            GB_BOX.TabIndex = 0;
+            GB_BOX.TabStop = false;
+            GB_BOX.Text = "Trivia";
             // 
             // OP_3
             // 
             OP_3.AutoSize = true;
             OP_3.Location = new Point(32, 163);
             OP_3.Name = "OP_3";
-            OP_3.Size = new Size(83, 19);
+            OP_3.Size = new Size(82, 19);
             OP_3.TabIndex = 3;
             OP_3.Text = "checkBox3";
             OP_3.UseVisualStyleBackColor = true;
@@ -68,7 +68,7 @@
             OP_2.AutoSize = true;
             OP_2.Location = new Point(32, 127);
             OP_2.Name = "OP_2";
-            OP_2.Size = new Size(83, 19);
+            OP_2.Size = new Size(82, 19);
             OP_2.TabIndex = 2;
             OP_2.Text = "checkBox2";
             OP_2.UseVisualStyleBackColor = true;
@@ -78,7 +78,7 @@
             OP_1.AutoSize = true;
             OP_1.Location = new Point(32, 87);
             OP_1.Name = "OP_1";
-            OP_1.Size = new Size(83, 19);
+            OP_1.Size = new Size(82, 19);
             OP_1.TabIndex = 1;
             OP_1.Text = "checkBox1";
             OP_1.UseVisualStyleBackColor = true;
@@ -127,17 +127,17 @@
             Controls.Add(BTN_Agregar_Bloque);
             Controls.Add(BTN_ENVIAR_RESPUESTA);
             Controls.Add(BTN_VOLVER_ATRAS);
-            Controls.Add(GoupBox);
+            Controls.Add(GB_BOX);
             Name = "PartidaGUI";
             Text = "PartidaGUI";
-            GoupBox.ResumeLayout(false);
-            GoupBox.PerformLayout();
+            GB_BOX.ResumeLayout(false);
+            GB_BOX.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private GroupBox GoupBox;
+        private GroupBox GB_BOX;
         private RichTextBox Rich_Tx;
         private Button BTN_VOLVER_ATRAS;
         private Button BTN_ENVIAR_RESPUESTA;

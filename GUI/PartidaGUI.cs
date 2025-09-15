@@ -18,6 +18,8 @@ namespace GUI
     public partial class PartidaGUI : Form
     {
         int Idusuario;
+        PartidaBE newPartida = new();
+
         public PartidaGUI(int id_usuario)
         {
             Idusuario = id_usuario;
@@ -47,6 +49,58 @@ namespace GUI
                     throw new ArgumentException("No deben quedar opciones vacias");
 
                 logica_Bloque.Crear_Bloque(newBloque);
+
+            }
+            catch( Exception ex )
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void Crear_Partida()
+        {
+            try
+            {
+                PartidaBLL logica_Partida = new();
+
+                DataTable Bloques_Cargados = logica_Partida.Obtener_Bloque() ;
+
+                Random aleatorio = new Random();
+
+                int contador = 0;
+
+                int index = aleatorio.Next(Bloques_Cargados.Rows.Count);
+
+                string enunciado = Bloques_Cargados.Rows[index]["ENUNCIADO"].ToString();
+
+                Rich_Tx.Clear();
+                Rich_Tx.AppendText(enunciado);
+
+                foreach( CheckBox CB in GB_BOX.Controls )
+                {
+                    CB.Text = string.Empty;
+                }
+
+                OP_1.Text = Bloques_Cargados.Rows[index]["RESPUESTA1"].ToString();
+                OP_2.Text = Bloques_Cargados.Rows[index]["RESPUESTA2"].ToString();
+                OP_3.Text = Bloques_Cargados.Rows[index]["RESPUESTA3"].ToString();
+                string respuestaCorrecta = Bloques_Cargados.Rows[index]["CORRECTA"].ToString();
+
+                BTN_ENVIAR_RESPUESTA.Click += (alo, send) =>
+                {
+                    if (string.Equals(OP_1.Text, respuestaCorrecta , StringComparison.OrdinalIgnoreCase))
+                    {
+                        contador += 1;
+                    }
+                    if (string.Equals(OP_2.Text, respuestaCorrecta, StringComparison.OrdinalIgnoreCase))
+                    {
+                        contador += 1;
+                    }
+                    if (string.Equals(OP_3.Text, respuestaCorrecta, StringComparison.OrdinalIgnoreCase))
+                    {
+                        contador += 1;
+                    }
+                };
 
             }
             catch( Exception ex )
