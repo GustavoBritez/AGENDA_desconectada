@@ -20,6 +20,13 @@ namespace GUI
         int Idusuario;
         PartidaBE newPartida = new();
 
+        DataTable Bloques_Cargados;
+
+        Random aleatorio = new Random();
+
+        int contador = 0;
+        int preguntas_realizadas = 0;
+
         public PartidaGUI(int id_usuario)
         {
             Idusuario = id_usuario;
@@ -51,7 +58,7 @@ namespace GUI
                 logica_Bloque.Crear_Bloque(newBloque);
 
             }
-            catch( Exception ex )
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -63,11 +70,16 @@ namespace GUI
             {
                 PartidaBLL logica_Partida = new();
 
-                DataTable Bloques_Cargados = logica_Partida.Obtener_Bloque() ;
+                if (Bloques_Cargados == null)
+                    Bloques_Cargados = logica_Partida.Obtener_Bloque();
 
-                Random aleatorio = new Random();
+                if (preguntas_realizadas >= 3)
+                {
+                    MessageBox.Show($"Juego terminado, Promedio {contador / preguntas_realizadas}");
+                    this.Close();
+                    return;
+                }
 
-                int contador = 0;
 
                 int index = aleatorio.Next(Bloques_Cargados.Rows.Count);
 
@@ -76,34 +88,49 @@ namespace GUI
                 Rich_Tx.Clear();
                 Rich_Tx.AppendText(enunciado);
 
-                foreach( CheckBox CB in GB_BOX.Controls )
-                {
-                    CB.Text = string.Empty;
-                }
-
                 OP_1.Text = Bloques_Cargados.Rows[index]["RESPUESTA1"].ToString();
                 OP_2.Text = Bloques_Cargados.Rows[index]["RESPUESTA2"].ToString();
                 OP_3.Text = Bloques_Cargados.Rows[index]["RESPUESTA3"].ToString();
+
                 string respuestaCorrecta = Bloques_Cargados.Rows[index]["CORRECTA"].ToString();
 
-                BTN_ENVIAR_RESPUESTA.Click += (alo, send) =>
-                {
-                    if (string.Equals(OP_1.Text, respuestaCorrecta , StringComparison.OrdinalIgnoreCase))
-                    {
-                        contador += 1;
-                    }
-                    if (string.Equals(OP_2.Text, respuestaCorrecta, StringComparison.OrdinalIgnoreCase))
-                    {
-                        contador += 1;
-                    }
-                    if (string.Equals(OP_3.Text, respuestaCorrecta, StringComparison.OrdinalIgnoreCase))
-                    {
-                        contador += 1;
-                    }
-                };
+                BTN_ENVIAR_RESPUESTA.Tag = respuestaCorrecta;
+
+                preguntas_realizadas += 1;
 
             }
-            catch( Exception ex )
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void BTN_ENVIAR_RESPUESTA_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string respuesta_correcta = BTN_ENVIAR_RESPUESTA.Tag.ToString();
+                string respuesta_usuario = string.Empty;
+
+                if (OP_1.Checked)
+                    respuesta_usuario = OP_1.Text;
+                if (OP_2.Checked)
+                    respuesta_usuario = OP_2.Text;
+                if (OP_3.Checked)
+                    respuesta_usuario = OP_3.Text;
+
+                if (respuesta_usuario == null)
+                    MessageBox.Show(" Deben colocar una respuesta correcta");
+
+                if (string.Equals(respuesta_correcta, respuesta_usuario, StringComparison.CurrentCultureIgnoreCase))
+                    contador += 1;
+                else
+                    MessageBox.Show($" La correcta respuesta era {respuesta_correcta}");
+
+                Crear_Partida();
+
+            }
+            catch ( Exception ex )
             {
                 MessageBox.Show(ex.Message);
             }

@@ -108,6 +108,7 @@
             BTN_ENVIAR_RESPUESTA.TabIndex = 2;
             BTN_ENVIAR_RESPUESTA.Text = "Enviar Respuesta";
             BTN_ENVIAR_RESPUESTA.UseVisualStyleBackColor = true;
+            BTN_ENVIAR_RESPUESTA.Click += BTN_ENVIAR_RESPUESTA_Click;
             // 
             // BTN_Agregar_Bloque
             // 
