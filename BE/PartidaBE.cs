@@ -8,10 +8,8 @@ namespace BE
 {
     public class PartidaBE
     {
-        private int id_partida;
         private List<BloqueBE> lista_Bloques;
 
-        public int Id_Partida { get { return id_partida; } set { id_partida = value; }}
         public void Agregar ( BloqueBE newBloque )
         {
             try

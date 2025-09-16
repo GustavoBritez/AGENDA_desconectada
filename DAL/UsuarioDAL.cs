@@ -21,7 +21,7 @@ namespace DAL
                 SqlParameter[] sp = new SqlParameter[]
                 {
                     new SqlParameter("@NOMBRE",System.Data.SqlDbType.NVarChar) { Value = newU.Nombre},
-                    new SqlParameter("@TELEFONO",System.Data.SqlDbType.NVarChar) { Value = newU.Telefono}
+                    new SqlParameter("@TELEFONO",System.Data.SqlDbType.Int) { Value = newU.Telefono}
                 };
 
                 acceso.Escribir( "AGREGAR_USUARIO", sp );
@@ -40,7 +40,7 @@ namespace DAL
             {
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@ID_USUARIO",System.Data.SqlDbType.NVarChar) { Value = id_usuario }
+                    new SqlParameter("@ID_USUARIO",System.Data.SqlDbType.Int) { Value = Convert.ToInt32(id_usuario) }
                 };
 
                 acceso.Escribir("ELIMINAR_USUARIO", sp);

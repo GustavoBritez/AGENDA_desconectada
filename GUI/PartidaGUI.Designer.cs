@@ -131,6 +131,7 @@
             Controls.Add(GB_BOX);
             Name = "PartidaGUI";
             Text = "PartidaGUI";
+            Load += PartidaGUI_Load;
             GB_BOX.ResumeLayout(false);
             GB_BOX.PerformLayout();
             ResumeLayout(false);

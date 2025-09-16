@@ -10,3 +10,15 @@ C:\Users\Danie\Source\Repos\AGENDA_desconectada\BE\obj\Debug\net9.0\BE.dll
 C:\Users\Danie\Source\Repos\AGENDA_desconectada\BE\obj\Debug\net9.0\refint\BE.dll
 C:\Users\Danie\Source\Repos\AGENDA_desconectada\BE\obj\Debug\net9.0\BE.pdb
 C:\Users\Danie\Source\Repos\AGENDA_desconectada\BE\obj\Debug\net9.0\ref\BE.dll
+C:\Users\Navegador\source\repos\GustavoBritez\AGENDA_desconectada\BE\bin\Debug\net9.0\BE.deps.json
+C:\Users\Navegador\source\repos\GustavoBritez\AGENDA_desconectada\BE\bin\Debug\net9.0\BE.dll
+C:\Users\Navegador\source\repos\GustavoBritez\AGENDA_desconectada\BE\bin\Debug\net9.0\BE.pdb
+C:\Users\Navegador\source\repos\GustavoBritez\AGENDA_desconectada\BE\obj\Debug\net9.0\BE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Navegador\source\repos\GustavoBritez\AGENDA_desconectada\BE\obj\Debug\net9.0\BE.AssemblyInfoInputs.cache
+C:\Users\Navegador\source\repos\GustavoBritez\AGENDA_desconectada\BE\obj\Debug\net9.0\BE.AssemblyInfo.cs
+C:\Users\Navegador\source\repos\GustavoBritez\AGENDA_desconectada\BE\obj\Debug\net9.0\BE.csproj.CoreCompileInputs.cache
+C:\Users\Navegador\source\repos\GustavoBritez\AGENDA_desconectada\BE\obj\Debug\net9.0\BE.sourcelink.json
+C:\Users\Navegador\source\repos\GustavoBritez\AGENDA_desconectada\BE\obj\Debug\net9.0\BE.dll
+C:\Users\Navegador\source\repos\GustavoBritez\AGENDA_desconectada\BE\obj\Debug\net9.0\refint\BE.dll
+C:\Users\Navegador\source\repos\GustavoBritez\AGENDA_desconectada\BE\obj\Debug\net9.0\BE.pdb
+C:\Users\Navegador\source\repos\GustavoBritez\AGENDA_desconectada\BE\obj\Debug\net9.0\ref\BE.dll

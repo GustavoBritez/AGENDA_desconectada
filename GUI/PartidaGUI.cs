@@ -130,10 +130,15 @@ namespace GUI
                 Crear_Partida();
 
             }
-            catch ( Exception ex )
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void PartidaGUI_Load(object sender, EventArgs e)
+        {
+            Crear_Partida();
         }
     }
 }

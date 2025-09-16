@@ -96,6 +96,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "UsuarioGUI";
             Text = "UsuarioGUI";
+            Load += UsuarioGUI_Load;
             ((System.ComponentModel.ISupportInitialize)Grilla_Usuarios).EndInit();
             ResumeLayout(false);
             PerformLayout();

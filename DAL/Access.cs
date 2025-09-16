@@ -10,7 +10,7 @@ namespace DAL
 {
     internal class Access
     {
-        private SqlConnection conexion = new SqlConnection("Colocar DATA");
+        private SqlConnection conexion = new SqlConnection("Data Source=.;Initial Catalog=LOPO;Integrated Security=True;Trust Server Certificate=True");
         private SqlTransaction transaction;
 
         public void Open()
@@ -47,6 +47,7 @@ namespace DAL
                     if (sp != null)
                         cmd.Parameters.AddRange(sp);
 
+                    cmd.Transaction = transaction;
 
                     int resultado = cmd.ExecuteNonQuery();
                     Commit_TX();
@@ -87,9 +88,7 @@ namespace DAL
                         adapter.Fill(tabla_datos);
                     }
                 }
-
                 return tabla_datos;
-
             }
             catch
             {
